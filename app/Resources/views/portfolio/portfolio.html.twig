@@ -2,163 +2,159 @@
 
 {% block title %}{{ parent() }}Portfolio{% endblock %}
 
-{% block google_analytics %}
-    <script>
-        (function(i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function() {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-        ga('create', 'UA-72536975-1', 'auto');
-        ga('send', 'pageview');
-    </script>
-{% endblock %}
+{% block google_analytics_solutions %}{% endblock %}
 
 {% block body %}
-    <div class="section big-height background-black">
+  <div class="section big-height background-black">
 
-        <div class="home-carousel-wrap fade-elements">
-            <div id="sync1" class="owl-carousel">
-                <div class="item background-home-image-1">
-                    <div class="dark-over-2"></div>
-                    <div class="home-text-wrap">
-                        <div class="container">
-                            <div class="twelve columns">
-                                <div class="home-text-freelance">
-                                    <h1>I am a<br><span>full-stack developer</span></h1>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    <div class="home-carousel-wrap fade-elements">
+      <div id="sync1" class="owl-carousel">
+        <div class="item background-home-image-1">
+          <div class="dark-over-2"></div>
+          <div class="home-text-wrap">
+            <div class="container">
+              <div class="twelve columns">
+                <div class="home-text-freelance">
+                  <h1>I am a<br>
+                    <span>full-stack developer</span>
+                  </h1>
                 </div>
-                <div class="item background-home-image-2">
-                    <div class="dark-over-2"></div>
-                    <div class="home-text-wrap">
-                        <div class="container">
-                            <div class="twelve columns">
-                                <div class="home-text-freelance">
-                                    <h1>... and I am also a<br><span>UI/UX designer</span></h1>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
-
-            <div id="sync2" class="owl-carousel fade-elements">
-                <div class="item">
-                </div>
-                <div class="item">
-                </div>
-            </div>
+          </div>
         </div>
+        <div class="item background-home-image-2">
+          <div class="dark-over-2"></div>
+          <div class="home-text-wrap">
+            <div class="container">
+              <div class="twelve columns">
+                <div class="home-text-freelance">
+                  <h1>... and I am also a<br>
+                    <span>UI/UX designer</span>
+                  </h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
+      <div id="sync2" class="owl-carousel fade-elements">
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
     </div>
 
-    <div class="section padding-top-bottom background-black">
+  </div>
 
-        <div class="container">
-            <div class="twelve columns">
-                <div id="portfolio-filter" class="portfolio-filter">
-                    <ul id="filter">
-                        <li><a href="#" class="current" data-filter="*" title="">all</a></li>
-                        <li class="tipped" data-title="3 projects" data-tipper-options='{"direction":"top","follow":"true"}'><a href="#" data-filter=".webdev" title="">web development</a></li>
-                        <li class="tipped" data-title="3 projects" data-tipper-options='{"direction":"top","follow":"true"}'><a href="#" data-filter=".appdev" title="">app development</a></li>
-                        <li class="tipped" data-title="4 projects" data-tipper-options='{"direction":"top","follow":"true"}'><a href="#" data-filter=".webdes" title="">web design</a></li>
-                        <li class="tipped" data-title="4 projects" data-tipper-options='{"direction":"top","follow":"true"}'><a href="#" data-filter=".appdes" title="">app design</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+  <div class="section padding-top-bottom background-black">
 
-        <div id="projects-grid" class="in-container have-space">
-            <a href="project.html" class="tipped" data-title="<strong>Wemblee</strong>" data-tipper-options='{"direction":"bottom","follow":"true","margin":35}'>
-                <div class="portfolio-box-1 half-width have-space webdev webdes">
-                    <img src="img/portfolio/1.jpg" alt="">
-                </div>
-            </a>
-            <a href="project.html" class="tipped" data-title="<strong>Creative Tech Days : Uzful</strong>" data-tipper-options='{"direction":"bottom","follow":"true","margin":35}'>
-                <div class="portfolio-box-1 half-width have-space webdev">
-                    <img src="img/portfolio/2.jpg" alt="">
-                </div>
-            </a>
-            <a href="project.html" class="tipped" data-title="<strong>Hackathon ECV Connect</strong>" data-tipper-options='{"direction":"bottom","follow":"true","margin":35}'>
-                <div class="portfolio-box-1 half-width have-space webdev">
-                    <img src="img/portfolio/3.jpg" alt="">
-                </div>
-            </a>
-            <a href="project.html" class="tipped" data-title="<strong>Blog</strong>" data-tipper-options='{"direction":"bottom","follow":"true","margin":35}'>
-                <div class="portfolio-box-1 half-width have-space webdev">
-                    <img src="img/portfolio/4.jpg" alt="">
-                </div>
-            </a>
-            <a href="project.html" class="tipped" data-title="<strong>Airwalk + Mairie de Paris</strong>" data-tipper-options='{"direction":"bottom","follow":"true","margin":35}'>
-                <div class="portfolio-box-1 half-width have-space webdes">
-                    <img src="img/portfolio/5.jpg" alt="">
-                </div>
-            </a>
-            <a href="project.html" class="tipped" data-title="<strong>Tiota, Uber like web app</strong>" data-tipper-options='{"direction":"bottom","follow":"true","margin":35}'>
-                <div class="portfolio-box-1 half-width have-space appdes">
-                    <img src="img/portfolio/6.jpg" alt="">
-                </div>
-            </a>
-            <a href="project.html" class="tipped" data-title="<strong>Cannes Festival : Tickets booking</strong>" data-tipper-options='{"direction":"bottom","follow":"true","margin":35}'>
-                <div class="portfolio-box-1 half-width have-space webdev">
-                    <img src="img/portfolio/7.jpg" alt="">
-                </div>
-            </a>
-            <a href="project.html" class="tipped" data-title="<strong>XBI</strong>" data-tipper-options='{"direction":"bottom","follow":"true","margin":35}'>
-                <div class="portfolio-box-1 half-width have-space webdev webdes">
-                    <img src="img/portfolio/8.jpg" alt="">
-                </div>
-            </a>
-            <a href="project.html" class="tipped" data-title="<strong>PIRL, the modern wiki</strong>" data-tipper-options='{"direction":"bottom","follow":"true","margin":35}'>
-                <div class="portfolio-box-1 half-width have-space webdev webdes">
-                    <img src="img/portfolio/9.jpg" alt="">
-                </div>
-            </a>
-            <a href="project.html" class="tipped" data-title="<strong>Creative Tech Days : ICI Montreuil</strong>" data-tipper-options='{"direction":"bottom","follow":"true","margin":35}'>
-                <div class="portfolio-box-1 half-width have-space webdev">
-                    <img src="img/portfolio/5.jpg" alt="">
-                </div>
-            </a>
-            <a href="project.html" class="tipped" data-title="<strong>Canal+ : myCANAL</strong>" data-tipper-options='{"direction":"bottom","follow":"true","margin":35}'>
-                <div class="portfolio-box-1 half-width have-space webdev webdes">
-                    <img src="img/portfolio/6.jpg" alt="">
-                </div>
-            </a>
-            <a href="project.html" class="tipped" data-title="<strong>3D fun</strong>" data-tipper-options='{"direction":"bottom","follow":"true","margin":35}'>
-                <div class="portfolio-box-1 half-width have-space webdev">
-                    <img src="img/portfolio/7.jpg" alt="">
-                </div>
-            </a>
-            <a href="project.html" class="tipped" data-title="<strong>Neediz : Shiny Porky</strong>" data-tipper-options='{"direction":"bottom","follow":"true","margin":35}'>
-                <div class="portfolio-box-1 half-width have-space webdev webdes appdev appdes">
-                    <img src="img/portfolio/8.jpg" alt="">
-                </div>
-            </a>
-            <a href="project.html" class="tipped" data-title="<strong>TIM (Tamil Independent Music)</strong>" data-tipper-options='{"direction":"bottom","follow":"true","margin":35}'>
-                <div class="portfolio-box-1 half-width have-space webdev webdes appdev appdes">
-                    <img src="img/portfolio/9.jpg" alt="">
-                </div>
-            </a>
+    <div class="container">
+      <div class="twelve columns">
+        <div id="portfolio-filter" class="portfolio-filter">
+          <ul id="filter">
+            <li>
+              <a href="#" class="current" data-filter="*" title="">all</a>
+            </li>
+            <li class="tipped" data-title="3 projects" data-tipper-options='{"direction":"top","follow":"true"}'>
+              <a href="#" data-filter=".webdev" title="">web development</a>
+            </li>
+            <li class="tipped" data-title="3 projects" data-tipper-options='{"direction":"top","follow":"true"}'>
+              <a href="#" data-filter=".appdev" title="">app development</a>
+            </li>
+            <li class="tipped" data-title="4 projects" data-tipper-options='{"direction":"top","follow":"true"}'>
+              <a href="#" data-filter=".webdes" title="">web design</a>
+            </li>
+            <li class="tipped" data-title="4 projects" data-tipper-options='{"direction":"top","follow":"true"}'>
+              <a href="#" data-filter=".appdes" title="">app design</a>
+            </li>
+          </ul>
         </div>
+      </div>
     </div>
+
+    <div id="projects-grid" class="in-container have-space">
+      <a href="project.html" class="tipped" data-title="<strong>Wemblee</strong>" data-tipper-options='{"direction":"bottom","follow":"true","margin":35}'>
+        <div class="portfolio-box-1 half-width have-space webdev webdes">
+          <img src="img/portfolio/1.jpg" alt="">
+        </div>
+      </a>
+      <a href="project.html" class="tipped" data-title="<strong>Creative Tech Days : Uzful</strong>" data-tipper-options='{"direction":"bottom","follow":"true","margin":35}'>
+        <div class="portfolio-box-1 half-width have-space webdev">
+          <img src="img/portfolio/2.jpg" alt="">
+        </div>
+      </a>
+      <a href="project.html" class="tipped" data-title="<strong>Hackathon ECV Connect</strong>" data-tipper-options='{"direction":"bottom","follow":"true","margin":35}'>
+        <div class="portfolio-box-1 half-width have-space webdev">
+          <img src="img/portfolio/3.jpg" alt="">
+        </div>
+      </a>
+      <a href="project.html" class="tipped" data-title="<strong>Blog</strong>" data-tipper-options='{"direction":"bottom","follow":"true","margin":35}'>
+        <div class="portfolio-box-1 half-width have-space webdev">
+          <img src="img/portfolio/4.jpg" alt="">
+        </div>
+      </a>
+      <a href="project.html" class="tipped" data-title="<strong>Airwalk + Mairie de Paris</strong>" data-tipper-options='{"direction":"bottom","follow":"true","margin":35}'>
+        <div class="portfolio-box-1 half-width have-space webdes">
+          <img src="img/portfolio/5.jpg" alt="">
+        </div>
+      </a>
+      <a href="project.html" class="tipped" data-title="<strong>Tiota, Uber like web app</strong>" data-tipper-options='{"direction":"bottom","follow":"true","margin":35}'>
+        <div class="portfolio-box-1 half-width have-space appdes">
+          <img src="img/portfolio/6.jpg" alt="">
+        </div>
+      </a>
+      <a href="project.html" class="tipped" data-title="<strong>Cannes Festival : Tickets booking</strong>" data-tipper-options='{"direction":"bottom","follow":"true","margin":35}'>
+        <div class="portfolio-box-1 half-width have-space webdev">
+          <img src="img/portfolio/7.jpg" alt="">
+        </div>
+      </a>
+      <a href="project.html" class="tipped" data-title="<strong>XBI</strong>" data-tipper-options='{"direction":"bottom","follow":"true","margin":35}'>
+        <div class="portfolio-box-1 half-width have-space webdev webdes">
+          <img src="img/portfolio/8.jpg" alt="">
+        </div>
+      </a>
+      <a href="project.html" class="tipped" data-title="<strong>PIRL, the modern wiki</strong>" data-tipper-options='{"direction":"bottom","follow":"true","margin":35}'>
+        <div class="portfolio-box-1 half-width have-space webdev webdes">
+          <img src="img/portfolio/9.jpg" alt="">
+        </div>
+      </a>
+      <a href="project.html" class="tipped" data-title="<strong>Creative Tech Days : ICI Montreuil</strong>" data-tipper-options='{"direction":"bottom","follow":"true","margin":35}'>
+        <div class="portfolio-box-1 half-width have-space webdev">
+          <img src="img/portfolio/5.jpg" alt="">
+        </div>
+      </a>
+      <a href="project.html" class="tipped" data-title="<strong>Canal+ : myCANAL</strong>" data-tipper-options='{"direction":"bottom","follow":"true","margin":35}'>
+        <div class="portfolio-box-1 half-width have-space webdev webdes">
+          <img src="img/portfolio/6.jpg" alt="">
+        </div>
+      </a>
+      <a href="project.html" class="tipped" data-title="<strong>3D fun</strong>" data-tipper-options='{"direction":"bottom","follow":"true","margin":35}'>
+        <div class="portfolio-box-1 half-width have-space webdev">
+          <img src="img/portfolio/7.jpg" alt="">
+        </div>
+      </a>
+      <a href="project.html" class="tipped" data-title="<strong>Neediz : Shiny Porky</strong>" data-tipper-options='{"direction":"bottom","follow":"true","margin":35}'>
+        <div class="portfolio-box-1 half-width have-space webdev webdes appdev appdes">
+          <img src="img/portfolio/8.jpg" alt="">
+        </div>
+      </a>
+      <a href="project.html" class="tipped" data-title="<strong>TIM (Tamil Independent Music)</strong>" data-tipper-options='{"direction":"bottom","follow":"true","margin":35}'>
+        <div class="portfolio-box-1 half-width have-space webdev webdes appdev appdes">
+          <img src="img/portfolio/9.jpg" alt="">
+        </div>
+      </a>
+    </div>
+  </div>
 {% endblock %}
 
-{% block javascript_part2 %}
-    <script src="{{ asset('js/masonry.min.js') }}"></script>
-    <script src="{{ asset('js/isotope.min.js') }}"></script>
+{% block javascript_part1 %}
+  <script src="{{ asset('js/masonry.min.js') }}"></script>
+  <script src="{{ asset('js/isotope.min.js') }}"></script>
 {% endblock %}
 
-{% block javascript_part4 %}
-    <script src="{{ asset('js/parallax.min.js') }}"></script>
-    <script src="{{ asset('js/owl.min.js') }}"></script>
-    <script src="{{ asset('js/custom-index.min.js') }}"></script>
+{% block javascript_part3 %}
+  <script src="{{ asset('js/parallax.min.js') }}"></script>
+  <script src="{{ asset('js/owl.min.js') }}"></script>
+  <script src="{{ asset('js/custom-index.min.js') }}"></script>
 {% endblock %}
