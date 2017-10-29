@@ -14,32 +14,30 @@
 <!--[if IE 8]><html class="no-js lt-ie9" lang="en"><![endif]-->
 <!--[if gt IE 8]> <!-->
 <html class="no-js" lang="en">
-  <!--<![endif]-->
+<!--<![endif]-->
 
-  <head>
+<head>
 
     <!-- BASIC PAGE NEEDS -->
     <meta charset="utf-8">
     <title>
-      {% block title %}lacoludo |
-      {% endblock %}
+        {% block title %}lacoludo |
+        {% endblock %}
     </title>
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- END : BASIC PAGE NEEDS -->
 
     <!-- GOOGLE ANALYTICS SOLUTIONS -->
-    {% block google_analytics_solutions %}
-      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-72536975-4"></script>
-      <script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-72536975-4"></script>
+    <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() {
-          dataLayer.push(arguments)
+            dataLayer.push(arguments)
         };
         gtag('js', new Date());
         gtag('config', 'UA-72536975-4');
-      </script>
-    {% endblock %}
+    </script>
     <!-- END : GOOGLE ANALYTICS SOLUTIONS -->
 
     <!-- MOBILE SPECIFIC METAS -->
@@ -48,165 +46,162 @@
 
     <!-- CSS -->
     {% block css %}
-      <link rel="stylesheet" href="{{ asset('css/base.min.css') }}">
-      <link rel="stylesheet" href="{{ asset('css/skeleton.min.css') }}">
-      <link rel="stylesheet" href="{{ asset('css/layout.min.css') }}">
-      <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
-      <link rel="stylesheet" href="{{ asset('css/retina.min.css') }}">
-      <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
-      <link rel="stylesheet" href="{{ asset('css/owl.transitions.min.css') }}">
+        <link rel="stylesheet" href="{{ preload(asset('build/lacoludo-css.css')) }}">
     {% endblock %}
     <!-- END : CSS -->
 
     <!-- FAVICONS -->
-    <!-- <link rel="shortcut icon" href="{{ asset('favicon.png') }}">
-      <link rel="apple-touch-icon" href="{{ asset('apple-touch-icon.png') }}">
-      <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('apple-touch-icon-72x72.png') }}">
-      <link rel="apple-touch-icon" sizes="114x114" href="{{ asset ('apple-touch-icon-114x114.png') }}"> -->
+    <!-- <link rel="shortcut icon" href="{{ preload(asset('favicon.png')) }}">
+      <link rel="apple-touch-icon" href="{{ preload(asset('apple-touch-icon.png')) }}">
+      <link rel="apple-touch-icon" sizes="72x72" href="{{ preload(asset('apple-touch-icon-72x72.png')) }}">
+      <link rel="apple-touch-icon" sizes="114x114" href="{{ preload(asset('apple-touch-icon-114x114.png')) }}"> -->
     <!-- END : FAVICONS -->
 
-    <script src="js/modernizr.custom.min.js"></script>
+    <script src="{{ preload(asset('js/modernizr.custom.js')) }}"></script>
 
-  </head>
+</head>
 
-  <body class="royal_preloader">
+<body class="royal_preloader">
 
-    <div id="royal_preloader"></div>
+<div id="royal_preloader"></div>
 
-    <!-- HEADER -->
-    <div class="cd-nav-container" id="cd-nav">
-      <header>
+<!-- HEADER -->
+<div class="cd-nav-container" id="cd-nav">
+    <header>
         <a href="#0" class="cd-close-nav">Close</a>
-      </header>
+    </header>
 
-      <div class="cd-nav">
+    <div class="cd-nav">
         <nav class="menu menu--mohe">
-          <a class="menu__item" href="{{ path(" app_portfolio_show") }}">
-            <span class="menu__item-name {% if app.request.get('_route') == 'app_portfolio_show' %}current-nav{% endif %}">Portfolio</span>
-            <span class="menu__item-label">Explore my works</span>
-          </a>
-          <!-- <a class="menu__item" href="me.html"> -->
-          <!-- <a class="menu__item" href="#">
-                            <span class="menu__item-name">Me</span>
-                            <span class="menu__item-label">Who am I ?</span>
-                        </a> -->
-          <!-- <a class="menu__item" href="blog.html"> -->
-          <!-- <a class="menu__item" href="#">
-                            <span class="menu__item-name">Journal</span>
-                            <span class="menu__item-label">Discover fascinating stories</span>
-                        </a> -->
-          <a class="menu__item" href="{{ path(" app_contact_show") }}">
-            <span class="menu__item-name {% if app.request.get('_route') == 'app_contact_show' %}current-nav{% endif %}">Contact</span>
-            <span class="menu__item-label">Get in touch and find me</span>
-          </a>
+            <a class="menu__item" href="{{ path("app_portfolio_show") }}">
+                <span class="menu__item-name {% if app.request.get('_route') == 'app_portfolio_show' %}current-nav{% endif %}">Portfolio</span>
+                <span class="menu__item-label">Explore my works</span>
+            </a>
+            <!-- <a class="menu__item" href="me.html"> -->
+            <!-- <a class="menu__item" href="#">
+                              <span class="menu__item-name">Me</span>
+                              <span class="menu__item-label">Who am I ?</span>
+                          </a> -->
+            <!-- <a class="menu__item" href="blog.html"> -->
+            <!-- <a class="menu__item" href="#">
+                              <span class="menu__item-name">Journal</span>
+                              <span class="menu__item-label">Discover fascinating stories</span>
+                          </a> -->
+            <a class="menu__item" href="{{ path("app_contact_show") }}">
+                <span class="menu__item-name {% if app.request.get('_route') == 'app_contact_show' %}current-nav{% endif %}">Contact</span>
+                <span class="menu__item-label">Get in touch and find me</span>
+            </a>
         </nav>
-      </div>
-
-      <ul class="nav-social">
-        <li>
-          <a target="_blank" class="github" href="https://github.com/lacoludo">
-            <i class="fa fa-github" aria-hidden="true"></i>
-          </a>
-        </li>
-        <li>
-          <a target="_blank" class="behance" href="https://www.behance.net/lacoludo">
-            <i class="fa fa-behance" aria-hidden="true"></i>
-          </a>
-        </li>
-        <li>
-          <a target="_blank" class="linkedin" href="https://www.linkedin.com/in/lacoludo/">
-            <i class="fa fa-linkedin" aria-hidden="true"></i>
-          </a>
-        </li>
-        <li>
-          <a target="_blank" class="twitter" href="https://twitter.com/lacoludo">
-            <i class="fa fa-twitter" aria-hidden="true"></i>
-          </a>
-        </li>
-      </ul>
-
     </div>
 
-    <div class="cd-overlay"></div>
+    <ul class="nav-social">
+        <li>
+            <a target="_blank" class="github" href="https://github.com/lacoludo">
+                <i class="fa fa-github" aria-hidden="true"></i>
+            </a>
+        </li>
+        <li>
+            <a target="_blank" class="behance" href="https://www.behance.net/lacoludo">
+                <i class="fa fa-behance" aria-hidden="true"></i>
+            </a>
+        </li>
+        <li>
+            <a target="_blank" class="linkedin" href="https://www.linkedin.com/in/lacoludo/">
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </a>
+        </li>
+        <li>
+            <a target="_blank" class="twitter" href="https://twitter.com/lacoludo">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
 
-    <nav id="menu-wrap" class="menu-back cbp-af-header">
-      <div class="container">
+</div>
+
+<div class="cd-overlay"></div>
+
+<nav id="menu-wrap" class="menu-back cbp-af-header">
+    <div class="container">
         <div class="twelve columns">
-          <div class="menu">
-            <a href="{{ path(" app_portfolio_show") }}">
-              <div class="logo"></div>
-            </a>
-            <a href="#cd-nav" class="cd-nav-trigger">
-              Menu
-              <span></span>
-            </a>
-          </div>
+            <div class="menu">
+                <a href="{{ path("app_portfolio_show") }}">
+                    <div class="logo"></div>
+                </a>
+                <a href="#cd-nav" class="cd-nav-trigger">
+                    Menu
+                    <span></span>
+                </a>
+            </div>
         </div>
-      </div>
-    </nav>
-    <!-- END : HEADER -->
+    </div>
+</nav>
+<!-- END : HEADER -->
 
-    <!-- BODY -->
-    {% block body %}{% endblock %}
-    <!-- END : BODY -->
+<!-- BODY -->
+{% block body %}{% endblock %}
+<!-- END : BODY -->
 
-    <!-- FOOTER -->
-    <div class="section padding-top-bottom background-black">
-      <div class="container">
+<!-- FOOTER -->
+<div class="section padding-top-bottom background-black">
+    <div class="container">
         <div class="six columns footer" data-scroll-reveal="enter bottom move 60px over 0.9s after 0.1s">
-          <p>Call me at
-            <a href="#">+33 7 81 81 49 79</a><br>or say hello at
-            <a href="#">email@lacoludo.com</a>
-          </p>
+            <p>Call me at
+                <a href="#">+33 7 81 81 49 79</a><br>or say hello at
+                <a href="#">email@lacoludo.com</a>
+            </p>
         </div>
         <div class="six columns" data-scroll-reveal="enter bottom move 60px over 0.9s after 0.1s">
-          <ul class="footer-social">
-            <li>
-              <a target="_blank" class="github" href="https://github.com/lacoludo">
-                <i class="fa fa-github" aria-hidden="true"></i>
-              </a>
-            </li>
-            <li>
-              <a target="_blank" class="behance" href="https://www.behance.net/lacoludo">
-                <i class="fa fa-behance" aria-hidden="true"></i>
-              </a>
-            </li>
-            <li>
-              <a target="_blank" class="linkedin" href="https://www.linkedin.com/in/lacoludo/">
-                <i class="fa fa-linkedin" aria-hidden="true"></i>
-              </a>
-            </li>
-            <li>
-              <a target="_blank" class="twitter" href="https://twitter.com/lacoludo">
-                <i class="fa fa-twitter" aria-hidden="true"></i>
-              </a>
-            </li>
-          </ul>
+            <ul class="footer-social">
+                <li>
+                    <a target="_blank" class="github" href="https://github.com/lacoludo">
+                        <i class="fa fa-github" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" class="behance" href="https://www.behance.net/lacoludo">
+                        <i class="fa fa-behance" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" class="linkedin" href="https://www.linkedin.com/in/lacoludo/">
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" class="twitter" href="https://twitter.com/lacoludo">
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </a>
+                </li>
+            </ul>
         </div>
-      </div>
     </div>
-    <!-- END : FOOTER -->
+</div>
+<!-- END : FOOTER -->
 
-    <!-- SCROLL TO TOP -->
-    <div class="scroll-to-top tipped" data-title="<em>top</em>" data-tipper-options='{"direction":"bottom","follow":"true","margin":20}'></div>
-    <!-- END : SCROLL TO TOP -->
+<!-- SCROLL TO TOP -->
+<div class="scroll-to-top tipped" data-title="<em>top</em>" data-tipper-options='{"direction":"bottom","follow":"true","margin":20}'></div>
+<!-- END : SCROLL TO TOP -->
 
-    <!-- JAVASCRIPT -->
-    <script src="{{ asset('js/jquery-2.1.1.min.js') }}"></script>
-    <script src="{{ asset('js/royal_preloader.min.js') }}"></script>
-    <script src="{{ asset('js/retina-1.1.0.min.js') }}"></script>
-    <script src="{{ asset('js/jquery.easing.min.js') }}"></script>
-    <script src="{{ asset('js/header-anime.min.js') }}"></script>
-    <script src="{{ asset('js/charming.min.js') }}"></script>
-    <script src="{{ asset('js/anime.min.js') }}"></script>
-    <script src="{{ asset('js/nav-anime.js') }}"></script>
-    {% block javascript_part1 %}{% endblock %}
-    <script src="{{ asset('js/tipper.min.js') }}"></script>
-    {% block javascript_part2 %}{% endblock %}
-    <script src="{{ asset('js/scrollReveal.min.js') }}"></script>
-    {% block javascript_part3 %}{% endblock %}
-    <!-- END : JAVASCRIPT -->
+<!-- JAVASCRIPT -->
+<!-- these two files now must be included in every page -->
+<!-- <script src="{{ preload(asset('build/manifest.js')) }}"></script> -->
+<!-- <script src="{{ preload(asset('build/lacoludo-javascript.js')) }}"></script> -->
+<script src="{{ preload(asset('js/jquery-2.1.1.js')) }}"></script>
+<script src="{{ preload(asset('js/royal_preloader.min.js')) }}"></script>
+<script src="{{ preload(asset('js/retina-1.1.0.min.js')) }}"></script>
+<script src="{{ preload(asset('js/jquery.easing.js')) }}"></script>
+<script src="{{ preload(asset('js/header-anime.js')) }}"></script>
+<script src="{{ preload(asset('js/charming.min.js')) }}"></script>
+<script src="{{ preload(asset('js/anime.min.js')) }}"></script>
+<script src="{{ preload(asset('js/nav-anime.js')) }}"></script>
+{% block javascript_part1 %}{% endblock %}
+<script src="{{ preload(asset('js/tipper.js')) }}"></script>
+{% block javascript_part2 %}{% endblock %}
+<script src="{{ preload(asset('js/scrollReveal.js')) }}"></script>
+{% block javascript_part3 %}{% endblock %}
+<!-- END : JAVASCRIPT -->
 
-  </body>
+</body>
 
 </html>

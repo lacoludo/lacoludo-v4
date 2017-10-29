@@ -1,0 +1,13 @@
+Options +FollowSymLinks
+
+RewriteEngine On
+
+RewriteBase /
+
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+    RewriteCond %{SERVER_PORT} 80
+    RewriteRule ^(.*)$ https://v4.lacoludo.com/$1 [R=301,L]
+    RewriteRule    ^$    web/    [L]
+    RewriteRule    (.*) web/$1    [L]
+</IfModule>
