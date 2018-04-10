@@ -5,13 +5,13 @@ namespace AppBundle\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-class ContactController extends Controller
+class ProjectController extends Controller
 {
     /**
-     * @Route("/contact", name="app_contact_show")
+     * @Route("/project", name="app_project_show")
      */
-    public function showContact()
+    public function showProject()
     {
-        return $this->render('contact/contact.html.twig');
+        return $this->render('project/project.html.twig');
     }
 }

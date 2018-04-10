@@ -10,7 +10,7 @@ class PortfolioController extends Controller
     /**
      * @Route("/portfolio", name="app_portfolio_show")
      */
-    public function showAction()
+    public function showPortfolio()
     {
         return $this->render('portfolio/portfolio.html.twig');
     }
