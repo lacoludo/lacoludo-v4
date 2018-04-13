@@ -1,10 +1,10 @@
 <?php
 
-/* Code by David McKeown - craftedbydavid.com */
+/* Code by lacoludo */
 /* Editable entries are bellow */
 
-$send_to = "mail@server.com";
-$send_subject = "Ajax form ";
+$send_to = "email@lacoludo.com";
+$send_subject = "Hello Ludo !";
 
 
 
